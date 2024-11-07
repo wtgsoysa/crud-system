@@ -12,5 +12,5 @@ public interface CustomerService {
     String updateCustomer(CustomerUpdateDTO customerUpdateDTO);
 
 
-
+    List<CustomerDTO> getAllCustomers();
 }

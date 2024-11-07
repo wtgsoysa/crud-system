@@ -37,6 +37,27 @@ public class CustomerServiceIMPL implements CustomerService {
 
     }
 
+    @Override
+    public List<CustomerDTO> getAllCustomers() {
+        List<Customer> getAllCustomers = customerRepo.findAll();
+
+        List<CustomerDTO> customerDTOList = new ArrayList<>();
+
+        for(Customer customer : getAllCustomers){
+            CustomerDTO customerDTO = new CustomerDTO(
+                    customer.getCustomerId(),
+                    customer.getCustomerName(),
+                    customer.getCustomerEmail(),
+                    customer.getCustomerAddress(),
+                    customer.getCustomerNic(),
+                    customer.getCustomerNumber(),
+                    customer.isCustomerActive()
+            );
+            customerDTOList.add(customerDTO);
+        }
+        return customerDTOList;
+    }
+
 
     @Override
     public String saveCustomer(CustomerDTO customerDTO) {
