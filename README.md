@@ -42,4 +42,4 @@ To set up and run the project on your local machine, follow these steps:
 
 1. **Clone the repository** 📂:
    ```bash
-   git clone https://github.com/YourUsername/YourRepoName.git
+   git clone https://github.com/wtgsoysa/crud-system.git
